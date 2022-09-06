@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/part_of_speech_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        tools:text="noun" />
+
+    <LinearLayout
+        android:id="@+id/definitions_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+    <TextView
+        android:id="@+id/synonyms_header_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text = "Synonyms: "
+        android:textColor="@color/black"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/synonyms_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+    <TextView
+        android:id="@+id/antonyms_header_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Antonyms: "
+        android:textColor="@color/black"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/antonyms_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+</LinearLayout>

@@ -6,4 +6,5 @@
     <string name="search">search</string>
     <string name="bookmarked">bookmarked</string>
     <string name="settings">settings</string>
+    <string name="search_for_word">Search for word</string>
 </resources>
