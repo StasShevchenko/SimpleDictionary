@@ -37,6 +37,13 @@
             android:layout_height="wrap_content"
             android:padding="8dp"
             android:orientation="vertical" />
+        <ImageButton
+            android:id="@+id/bookmark_image_button"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_bookmark"
+            android:layout_margin="8dp"/>
 
     </LinearLayout>
 

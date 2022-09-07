@@ -2,13 +2,10 @@ package com.example.simpledictionary.presentation.dictionary_screen
 
 
 import android.annotation.SuppressLint
-import android.app.ActionBar
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
 import android.widget.TextView
-import androidx.core.view.marginEnd
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -16,11 +13,19 @@ import com.example.simpledictionary.databinding.MeaningItemBinding
 import com.example.simpledictionary.databinding.WordItemBinding
 import com.example.simpledictionary.domain.model.WordInfo
 
-class WordsAdapter() : ListAdapter<WordInfo, WordsAdapter.WordViewHolder>(DiffCallback()) {
+class WordsAdapter(
+    private val onClickAction: (WordInfo) -> Unit
+) : ListAdapter<WordInfo, WordsAdapter.WordViewHolder>(DiffCallback()) {
 
     inner class WordViewHolder(
         private val binding: WordItemBinding
     ) : RecyclerView.ViewHolder(binding.root) {
+
+        init {
+            binding.bookmarkImageButton.setOnClickListener {
+                onClickAction(getItem(bindingAdapterPosition))
+            }
+        }
 
         @SuppressLint("SetTextI18n")
         fun bind(word: WordInfo) {
