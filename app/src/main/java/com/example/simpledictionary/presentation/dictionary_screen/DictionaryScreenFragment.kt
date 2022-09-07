@@ -1,6 +1,7 @@
 package com.example.simpledictionary.presentation.dictionary_screen
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
@@ -28,7 +29,9 @@ class DictionaryScreenFragment : Fragment(R.layout.dictionary_screen_fragment) {
         val wordsAdapter = WordsAdapter()
         binding.apply {
             searchWordEditText.addTextChangedListener {
-                viewModel.searchWord(it.toString())
+                if (searchWordEditText.hasFocus()) {
+                    viewModel.searchWord(it.toString())
+                }
             }
 
             wordsRv.apply {
@@ -43,7 +46,7 @@ class DictionaryScreenFragment : Fragment(R.layout.dictionary_screen_fragment) {
                     if (wordsState.isLoading) {
                         binding.progressBar.visibility = View.VISIBLE
                         binding.errorTextView.visibility = View.INVISIBLE
-                    } else if(wordsState.isError){
+                    } else if (wordsState.isError) {
                         binding.progressBar.visibility = View.INVISIBLE
                         binding.errorTextView.text = wordsState.errorMessage
                         binding.errorTextView.visibility = View.VISIBLE
