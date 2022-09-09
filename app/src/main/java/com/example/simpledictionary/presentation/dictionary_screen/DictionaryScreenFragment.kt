@@ -68,14 +68,18 @@ class DictionaryScreenFragment : Fragment(R.layout.dictionary_screen_fragment) {
                             requireActivity().findViewById(R.id.nav_host_fragment),
                             uiEvent.message,
                             Snackbar.LENGTH_SHORT
-                        ).show()
+                        )
+                            .setAnchorView(requireActivity().findViewById(R.id.bottom_navigation))
+                            .show()
                     }
                     DictionaryScreenViewModel.UiEvent.WordIsSaved -> {
                         Snackbar.make(
                             requireActivity().findViewById(R.id.nav_host_fragment),
                             uiEvent.message,
                             Snackbar.LENGTH_SHORT
-                        ).show()
+                        )
+                            .setAnchorView(requireActivity().findViewById(R.id.bottom_navigation))
+                            .show()
                     }
                 }
             }

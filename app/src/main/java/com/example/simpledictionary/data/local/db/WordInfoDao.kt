@@ -18,6 +18,6 @@ interface WordInfoDao {
     fun getSavedWordInfoEntities(): Flow<List<WordInfoEntity>>
 
     @Query("DELETE FROM wordinfoentity WHERE word = :word")
-    fun deleteSavedWordInfoEntity(word: String)
+    suspend fun deleteSavedWordInfoEntity(word: String)
 
 }
