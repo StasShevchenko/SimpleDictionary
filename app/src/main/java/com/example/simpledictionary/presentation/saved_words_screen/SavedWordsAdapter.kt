@@ -58,10 +58,10 @@ class SavedWordsAdapter(
                     else
                         phoneticTextView.text = word.phonetic
                     //adding meanings items to word items
+                    meaningsLinearLayout.removeAllViews()
                     word.meanings.forEach { meaning ->
                         val meaningItemBinding =
                             MeaningItemBinding.inflate(LayoutInflater.from(itemView.context))
-                        meaningsLinearLayout.removeAllViews()
                         meaningItemBinding.apply {
                             partOfSpeechTextView.text = meaning.partOfSpeech
                             //adding all the meanings to the meaning item
@@ -96,16 +96,18 @@ class SavedWordsAdapter(
                                 meaningItemBinding.synonymsLinearLayout.addView(synonymTextView)
                             }
 
+
                             if (meaning.antonyms.isNotEmpty()) {
                                 meaningItemBinding.antonymsHeaderTextView.visibility = View.VISIBLE
-                                val synonymTextView = TextView(itemView.context)
+                                val antonymTextView = TextView(itemView.context)
                                 var antonymText = ""
                                 meaning.antonyms.forEach { antonym ->
                                     if (meaning.antonyms.indexOf(antonym) != meaning.antonyms.size - 1)
                                         antonymText += "$antonym, "
                                     else antonymText += antonym
                                 }
-                                meaningItemBinding.synonymsLinearLayout.addView(synonymTextView)
+                                antonymTextView.text = antonymText
+                                meaningItemBinding.antonymsLinearLayout.addView(antonymTextView)
                             }
                         }
                         meaningsLinearLayout.addView(meaningItemBinding.root)
