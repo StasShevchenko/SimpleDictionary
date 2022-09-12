@@ -50,9 +50,9 @@ class SavedWordsScreenFragment : Fragment(R.layout.saved_words_screen_fragment) 
             viewModel.eventFlow.collectLatest { event ->
                 when (event) {
                     is SavedWordsScreenViewModel.UiEvent.WordIsDeleted -> {
-                        Snackbar.make(binding.root, "Word was deleted!", Snackbar.LENGTH_LONG)
+                        Snackbar.make(binding.root, getString(R.string.word_deleted), Snackbar.LENGTH_LONG)
                             .setAnchorView(requireActivity().findViewById(R.id.bottom_navigation))
-                            .setAction("Undo"){
+                            .setAction(getString(R.string.undo)){
                                 viewModel.saveDeletedWord(event.wordInfo)
                             }
                             .show()

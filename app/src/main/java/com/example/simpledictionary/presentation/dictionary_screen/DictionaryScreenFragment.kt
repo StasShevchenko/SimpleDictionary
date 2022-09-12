@@ -66,7 +66,7 @@ class DictionaryScreenFragment : Fragment(R.layout.dictionary_screen_fragment) {
                     DictionaryScreenViewModel.UiEvent.WordIsAlreadyExists -> {
                         Snackbar.make(
                             requireActivity().findViewById(R.id.nav_host_fragment),
-                            uiEvent.message,
+                            getString(R.string.word_already_exists),
                             Snackbar.LENGTH_SHORT
                         )
                             .setAnchorView(requireActivity().findViewById(R.id.bottom_navigation))
@@ -75,7 +75,7 @@ class DictionaryScreenFragment : Fragment(R.layout.dictionary_screen_fragment) {
                     DictionaryScreenViewModel.UiEvent.WordIsSaved -> {
                         Snackbar.make(
                             requireActivity().findViewById(R.id.nav_host_fragment),
-                            uiEvent.message,
+                            getString(R.string.word_was_added),
                             Snackbar.LENGTH_SHORT
                         )
                             .setAnchorView(requireActivity().findViewById(R.id.bottom_navigation))

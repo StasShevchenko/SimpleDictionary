@@ -3,17 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/darkk/AndroidStudioProjects/SimpleDictionary/app/src/main/res/drawable/comment_background.xml" value="0.1" />
-        <entry key="..\:/Users/darkk/AndroidStudioProjects/SimpleDictionary/app/src/main/res/layout/activity_main.xml" value="0.2" />
-        <entry key="..\:/Users/darkk/AndroidStudioProjects/SimpleDictionary/app/src/main/res/layout/dictionary_screen_fragment.xml" value="0.264" />
-        <entry key="..\:/Users/darkk/AndroidStudioProjects/SimpleDictionary/app/src/main/res/layout/meaning_item.xml" value="0.5780525502318392" />
-        <entry key="..\:/Users/darkk/AndroidStudioProjects/SimpleDictionary/app/src/main/res/layout/save_word_header.xml" value="0.1" />
-        <entry key="..\:/Users/darkk/AndroidStudioProjects/SimpleDictionary/app/src/main/res/layout/saved_word_header.xml" value="0.536" />
-        <entry key="..\:/Users/darkk/AndroidStudioProjects/SimpleDictionary/app/src/main/res/layout/saved_word_item.xml" value="0.1" />
-        <entry key="..\:/Users/darkk/AndroidStudioProjects/SimpleDictionary/app/src/main/res/layout/saved_words_screen_fragment.xml" value="0.12360688956433637" />
-        <entry key="..\:/Users/darkk/AndroidStudioProjects/SimpleDictionary/app/src/main/res/layout/settings_screen_fragment.xml" value="0.208984375" />
-        <entry key="..\:/Users/darkk/AndroidStudioProjects/SimpleDictionary/app/src/main/res/layout/word_item.xml" value="0.536" />
-        <entry key="..\:/Users/darkk/AndroidStudioProjects/SimpleDictionary/app/src/main/res/menu/bottom_menu.xml" value="0.14722222222222223" />
+        <entry key="..\:/Users/darkk/AndroidStudioProjects/SimpleDictionary/app/src/main/res/drawable/ic_check.xml" value="0.1" />
+        <entry key="..\:/Users/darkk/AndroidStudioProjects/SimpleDictionary/app/src/main/res/drawable/violet_button.xml" value="0.1" />
+        <entry key="..\:/Users/darkk/AndroidStudioProjects/SimpleDictionary/app/src/main/res/layout/settings_screen_fragment.xml" value="0.4" />
       </map>
     </option>
   </component>

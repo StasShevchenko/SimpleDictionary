@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Simple dictionary</string>
+    <string name="dictionary_screen">Словарь</string>
+    <string name="saved_words_screen">Сохраненные слова</string>
+    <string name="setting_screen">Настройки</string>
+    <string name="search">поиск</string>
+    <string name="bookmarked">закладки</string>
+    <string name="settings">настройки</string>
+    <string name="search_for_word">Искать слово</string>
+    <string name="internet_error_message">Упс, что-то пошло не так!</string>
+    <string name="word_was_added">Слово было добавлено в закладки!</string>
+    <string name="word_already_exists">Это слово уже есть в закладках!</string>
+    <string name="word_deleted">Слово удалено!</string>
+    <string name="undo">Отмена</string>
+    <string name="app_language">Язык приложения:</string>
+    <string name="english">Английский</string>
+    <string name="russian">Русский</string>
+    <string name="app_theme">Тема приложения:</string>
+    <string name="blue_theme">Синяя тема</string>
+    <string name="violet_theme">Фиолетовая тема</string>
+    <string name="green_theme">Зеленая тема</string>
+</resources>

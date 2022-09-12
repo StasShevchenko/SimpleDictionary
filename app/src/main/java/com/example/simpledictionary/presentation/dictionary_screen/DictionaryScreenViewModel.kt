@@ -7,6 +7,7 @@ import com.example.simpledictionary.domain.use_cases.GetSavedWordInfos
 import com.example.simpledictionary.domain.use_cases.GetWordInfo
 import com.example.simpledictionary.domain.use_cases.SaveWordInfo
 import com.example.simpledictionary.util.Resource
+import com.example.simpledictionary.util.ResourceManager
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
@@ -18,7 +19,7 @@ import javax.inject.Inject
 class DictionaryScreenViewModel @Inject constructor(
     private val getWordInfo: GetWordInfo,
     private val getSavedWordInfos: GetSavedWordInfos,
-    private val saveWordInfo: SaveWordInfo
+    private val saveWordInfo: SaveWordInfo,
 ) : ViewModel() {
 
     private val _wordsState: MutableStateFlow<WordsUiState> = MutableStateFlow(WordsUiState())
@@ -94,9 +95,9 @@ class DictionaryScreenViewModel @Inject constructor(
         }
     }
 
-    sealed class UiEvent(val message: String){
-        object WordIsSaved: UiEvent("Word was added to bookmarked!")
-        object WordIsAlreadyExists: UiEvent("Word is already exists in bookmarked!")
+    sealed class UiEvent{
+        object WordIsSaved: UiEvent()
+        object WordIsAlreadyExists: UiEvent()
     }
 
 }

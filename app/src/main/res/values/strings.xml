@@ -7,4 +7,16 @@
     <string name="bookmarked">bookmarked</string>
     <string name="settings">settings</string>
     <string name="search_for_word">Search for word</string>
+    <string name="internet_error_message">Oops, something went wrong!</string>
+    <string name="word_was_added">Word was added to bookmarked!</string>
+    <string name="word_already_exists">Word is already exists in bookmarked!</string>
+    <string name="word_deleted">Word was deleted!</string>
+    <string name="undo">Undo</string>
+    <string name="app_language">App language:</string>
+    <string name="english">English</string>
+    <string name="russian">Russian</string>
+    <string name="app_theme">App theme:</string>
+    <string name="blue_theme">Blue theme</string>
+    <string name="violet_theme">Violet theme</string>
+    <string name="green_theme">Green theme</string>
 </resources>

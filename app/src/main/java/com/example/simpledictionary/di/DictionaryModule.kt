@@ -12,6 +12,7 @@ import com.example.simpledictionary.domain.use_cases.DeleteSavedWordInfo
 import com.example.simpledictionary.domain.use_cases.GetSavedWordInfos
 import com.example.simpledictionary.domain.use_cases.GetWordInfo
 import com.example.simpledictionary.domain.use_cases.SaveWordInfo
+import com.example.simpledictionary.util.ResourceManager
 import com.google.gson.Gson
 import dagger.Module
 import dagger.Provides
@@ -28,7 +29,7 @@ object DictionaryModule {
     @Provides
     fun provideDeleteSavedWordInfo(
         repository: WordInfoRepository
-    ) : DeleteSavedWordInfo {
+    ): DeleteSavedWordInfo {
         return DeleteSavedWordInfo(repository)
     }
 
@@ -49,7 +50,7 @@ object DictionaryModule {
     @Provides
     fun provideGetWordInfo(
         repository: WordInfoRepository
-    ) : GetWordInfo {
+    ): GetWordInfo {
         return GetWordInfo(repository)
     }
 
@@ -57,14 +58,15 @@ object DictionaryModule {
     @Provides
     fun provideWordInfoRepository(
         api: DictionaryApi,
-        db: DictionaryDatabase
+        db: DictionaryDatabase,
+        resourceManager: ResourceManager
     ): WordInfoRepository {
-        return WordInfoRepositoryImpl(api, db.wordInfoDao)
+        return WordInfoRepositoryImpl(api, db.wordInfoDao, resourceManager)
     }
 
     @Singleton
     @Provides
-    fun provideDictionaryApi(): DictionaryApi{
+    fun provideDictionaryApi(): DictionaryApi {
         return Retrofit.Builder()
             .baseUrl(DictionaryApi.BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
