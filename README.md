@@ -2,7 +2,7 @@
 
 Simple dictionary app to get word defenitions from remote api. Supports three color themes and localization.
 
-#Screenshots
+# Screenshots
 <p align='center'>
 <img src="https://user-images.githubusercontent.com/79803411/215731818-3407f346-ca74-427a-984a-e7910b5e646f.png" alt="drawing" width="30%"/>
 
